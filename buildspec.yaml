@@ -9,6 +9,6 @@ phases:
       #Build spec reference
       #https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
       # Package SAM template
-      - sam package --template-file template.yaml --output-template-file packaged.yaml
+      - sam package --template-file template.yaml --s3-bucket devinstormharris-cloud-resume-artifacts --output-template-file packaged.yaml
       # Deploy packaged SAM template
       - sam deploy --template-file packaged.yaml --stack-name devinstormharriscloudresume 
